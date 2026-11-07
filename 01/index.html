@@ -78,6 +78,13 @@
       h1.titulo { font-size: 27px; } .copy p { font-size: 18px; } .copy p.destaque { font-size: 20px; }
       .btn-aceitar { font-size: 20px; padding: 18px 10px; } .caixa-preco .por { font-size: 44px; }
     }
+
+    /* Botões do upsell de 1 clique da Kiwify */
+    .kw-oferta button { display:block !important; width:100% !important; background:#28a745 !important; border:none !important; border-radius:10px !important;
+      color:#fff !important; font-family:'Oswald',sans-serif !important; font-size:24px !important; font-weight:600 !important; text-transform:uppercase;
+      padding:20px 14px !important; cursor:pointer; animation: pulso 1.8s infinite; margin-top:10px; }
+    .kw-oferta [id^="kiwify-upsell-cancel-trigger"] { text-align:center; color:#8a8a8a !important; font-size:15px !important; text-decoration:underline; margin:18px 0 8px; cursor:pointer; }
+    @media (max-width: 576px) { .kw-oferta button { font-size:20px !important; padding:18px 10px !important; } }
 </style>
 </head>
 
@@ -133,7 +140,7 @@
 <p>¡Pero esto solo es válido ahora! Si intentas comprarlo más tarde, vas a tener que pagar el precio normal de US$ 197.</p>
 <p>Y sé que tal vez pienses que no lo necesitas ahora, pero en el futuro, cuando notes que estás perdiendo todo lo que manifestaste, te vas a arrepentir de no haber aprovechado esta oportunidad.</p>
 <p>Para agregar este nuevo programa a tu paquete, solo haz clic en el botón verde de abajo.</p>
-<a href="LINK_ACEITAR_UP1" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
+<a href="#oferta" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
 <div class="selos">🔒 Compra 100% segura · Garantía de 30 días</div>
 <p>Además, si actúas ahora, también vas a recibir mi programa exclusivo <strong>Multiplica tu Amor y tus Relaciones en 21 Días</strong>, que cuesta US$ 97, pero hoy lo recibes de regalo.</p>
 <p>Este programa adicional te va a ayudar a fortalecer tus relaciones y atraer a las personas correctas a tu vida, eliminando cualquier bloqueo que te esté impidiendo vivir en plenitud en el amor.</p>
@@ -149,10 +156,12 @@
 <p>Te espero del otro lado y espero escuchar tu testimonio de victoria...</p>
         </div>
 
-        <div class="mb-5">
-<a href="LINK_ACEITAR_UP1" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
+        <div class="mb-5 kw-oferta" id="oferta">
+<div id="kiwify-upsell-uQ67rUG" data-upsell-url="" data-downsell-url="https://mentefertil.blog/d01/" style="--kiwify-upsell-accept-bg:#28a745;--kiwify-upsell-accept-color:#FFFFFF">
+          <button id="kiwify-upsell-trigger-uQ67rUG">¡SÍ, AGREGAR A MI PAQUETE!</button>
+          <div id="kiwify-upsell-cancel-trigger-uQ67rUG">No, ignorar los beneficios...</div>
+        </div><script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 <div class="selos">🔒 Compra 100% segura · Garantía de 30 días</div>
-          <a href="../d01/" id="recusar-up1" class="link-recusar">No, ignorar los beneficios...</a>
         </div>
 
       </div>
@@ -186,10 +195,6 @@ function getParams() {
         for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
     })
 }();
-</script>
-<script>
-// Recusou o Upsell 1: vai para o Downsell 1 levando os parâmetros da URL (dados do pedido da Kiwify + UTMs)
-(function(){var a=document.getElementById("recusar-up1");if(a&&location.search){a.href="../d01/"+location.search;}})();
 </script>
 </body>
 </html>

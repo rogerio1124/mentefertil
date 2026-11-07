@@ -78,6 +78,13 @@
       h1.titulo { font-size: 27px; } .copy p { font-size: 18px; } .copy p.destaque { font-size: 20px; }
       .btn-aceitar { font-size: 20px; padding: 18px 10px; } .caixa-preco .por { font-size: 44px; }
     }
+
+    /* Botões do upsell de 1 clique da Kiwify */
+    .kw-oferta button { display:block !important; width:100% !important; background:#28a745 !important; border:none !important; border-radius:10px !important;
+      color:#fff !important; font-family:'Oswald',sans-serif !important; font-size:24px !important; font-weight:600 !important; text-transform:uppercase;
+      padding:20px 14px !important; cursor:pointer; animation: pulso 1.8s infinite; margin-top:10px; }
+    .kw-oferta [id^="kiwify-upsell-cancel-trigger"] { text-align:center; color:#8a8a8a !important; font-size:15px !important; text-decoration:underline; margin:18px 0 8px; cursor:pointer; }
+    @media (max-width: 576px) { .kw-oferta button { font-size:20px !important; padding:18px 10px !important; } }
 </style>
 </head>
 
@@ -91,10 +98,6 @@
         <div class="progresso">
           <div class="rotulo">Paso 2 de 3 — Última oportunidad...</div>
           <div class="barra"><span style="width:80%"></span></div>
-        </div>
-
-        <div class="caixa-aviso">
-
         </div>
 
         <h1 class="titulo">¡Espera! <span class="amarelo">Tengo una propuesta todavía mejor</span> para ti</h1>
@@ -118,15 +121,17 @@
 <p>Estas clases te van a ayudar a impedir que la riqueza que tanto te costó manifestar desaparezca con el tiempo.</p>
 <p>Sin este programa, corres el riesgo de pasar toda la vida viendo cómo tu prosperidad se escapa entre los dedos...</p>
 <p>Entonces, si no quieres ver tu riqueza irse, ¡aprovecha esta oportunidad para proteger lo que conquistaste!</p>
-<a href="LINK_ACEITAR_DOWN1" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
+<a href="#oferta" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
 <div class="selos">🔒 Compra 100% segura · Garantía de 30 días</div>
 <p class="destaque">¡No pierdas esta oportunidad única de transformación!</p>
         </div>
 
-        <div class="mb-5">
-<a href="LINK_ACEITAR_DOWN1" class="btn-aceitar">¡SÍ, AGREGAR A MI PAQUETE!</a>
+        <div class="mb-5 kw-oferta" id="oferta">
+<div id="kiwify-upsell-JCs2j7J" data-upsell-url="" data-downsell-url="" style="--kiwify-upsell-accept-bg:#28a745;--kiwify-upsell-accept-color:#FFFFFF">
+          <button id="kiwify-upsell-trigger-JCs2j7J">¡SÍ, AGREGAR A MI PAQUETE!</button>
+          <div id="kiwify-upsell-cancel-trigger-JCs2j7J">No, ignorar los beneficios...</div>
+        </div><script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 <div class="selos">🔒 Compra 100% segura · Garantía de 30 días</div>
-          <a href="LINK_RECUSAR_DOWN1" class="link-recusar">No, ignorar los beneficios...</a>
         </div>
 
       </div>
